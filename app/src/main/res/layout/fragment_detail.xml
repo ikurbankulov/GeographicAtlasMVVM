@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/image_view_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toTopOf="@id/view_line"
+        app:layout_constraintEnd_toStartOf="@id/page_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="World countries"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/view_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ABB3BB"
+        app:layout_constraintBottom_toBottomOf="@id/page_title"
+        app:layout_constraintTop_toBottomOf="@id/page_title" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_line">
+
+        <ImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Capital -->
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/point"
+                app:layout_constraintBottom_toBottomOf="@id/header_capital"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header_capital" />
+
+            <TextView
+                android:id="@+id/header_capital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="12dp"
+                android:text="Capital:"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/capital_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+
+            <TextView
+                android:id="@+id/capital_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_capital"
+                tools:text="Astana" />
+
+            <!-- Coordinates -->
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/point"
+                app:layout_constraintBottom_toBottomOf="@id/header_coordinates"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header_coordinates" />
+
+            <TextView
+                android:id="@+id/header_coordinates"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="Coordinates:"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/capital_name" />
+
+            <TextView
+                android:id="@+id/coordinates_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_coordinates"
+                tools:text="23'434'454'67'" />
+
+
+            <!-- Population -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/point"
+                app:layout_constraintBottom_toBottomOf="@id/header_population"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header_population" />
+
+            <TextView
+                android:id="@+id/header_population"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="Population:"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/population_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/coordinates_value" />
+
+            <TextView
+                android:id="@+id/population_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_population"
+                tools:text="19 mln" />
+
+            <!-- Area -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/point"
+                app:layout_constraintBottom_toBottomOf="@id/header_area"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header_area" />
+
+            <TextView
+                android:id="@+id/header_area"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="Area:"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/area_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/population_value" />
+
+            <TextView
+                android:id="@+id/area_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_area"
+                tools:text="2 724 900 км²" />
+
+
+            <!-- Currency -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/point"
+                app:layout_constraintBottom_toBottomOf="@id/header_currency"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header_currency" />
+
+            <TextView
+                android:id="@+id/header_currency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="Currency:"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/currency_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/area_value" />
+
+            <TextView
+                android:id="@+id/currency_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_currency"
+                tools:text="Tenge (KZT)" />
+
+            <!-- Region -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/point"
+                app:layout_constraintBottom_toBottomOf="@id/header_region"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/region_name" />
+
+            <TextView
+                android:id="@+id/header_region"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="Region:"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/region_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currency_value" />
+
+            <TextView
+                android:id="@+id/region_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_region"
+                tools:text="Asia" />
+
+            <!-- Time Zones -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/point"
+                app:layout_constraintBottom_toBottomOf="@id/header_time_zones"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header_time_zones" />
+
+            <TextView
+                android:id="@+id/header_time_zones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="Time Zones:"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/time_zones_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/region_name" />
+
+            <TextView
+                android:id="@+id/time_zones_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_time_zones"
+                tools:text="UTC +3" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Geographic atlas</string>
+    <string name="some_error_occured">Some error occured</string>
+</resources>
